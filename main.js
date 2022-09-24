@@ -2,7 +2,7 @@ objects=[];
 status="";
 function preload()
 {
-    video=createvideo('video.mp4');
+    video=createVideo('video.mp4');
 }
 function setup()
 {
@@ -13,7 +13,7 @@ function setup()
 function start()
 {
     objectDetector=ml5.objectDetector('cocossd', modelLoaded);
-    document.getElementById("status").innerHTML="ststus: detectingObjects";
+    document.getElementById("status").innerHTML="status: Detecting Objects";
 }
 function modelLoaded()
 {
@@ -25,5 +25,5 @@ video.volume(0);
 }
 function draw()
 {
-    Image(video, 0, 0, 480, 300);
+    image(video, 0, 0, 480, 300);
 }
